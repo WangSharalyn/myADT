@@ -2,3 +2,6 @@
 /.vs
 .gitignore
 /*/Debug/*
+*.vcxproj
+*.filters
+*.user
