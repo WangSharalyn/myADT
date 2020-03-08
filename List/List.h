@@ -48,7 +48,7 @@ public:
 	}
 	int deduplicate(); // 无序去重
 	int uniquify(); // 有序去重
-private:
+protected:
 	Rank _size; // 规模
 	ListNodePosi(T) header; // 头哨兵
 	ListNodePosi(T) trailer; // 尾哨兵
