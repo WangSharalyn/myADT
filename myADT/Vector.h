@@ -47,7 +47,7 @@ public:
 	void sort() { sort(0, _size); }
 	int deduplicate(); // 无序向量唯一化
 	int uniquify(); //有序向量唯一化
-private:
+protected:
 	Rank _size; // 规模
 	int _capacity; // 容量
 	T* _elem; // 数据区域
