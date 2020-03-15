@@ -29,3 +29,12 @@
 ## Queue
 - enqueue
 - dequeue
+
+## Graph
+- BFS
+- DFS
+
+# BST
+- 插入
+- 删除
+- 查找
