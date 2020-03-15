@@ -1,5 +1,7 @@
-#include "BinNode.h"
+#include "BinTree.h"
 #include <iostream>
+using std::cout;
+using std::endl;
 
 int main() {
 	BinNode<int> a(1);
@@ -20,5 +22,12 @@ int main() {
 	std::cout << std::endl;
 	a.traversalLevel(&a);
 	std::cout << std::endl;
+	BinTree<int> bt;
+	cout << bt.size() << endl;
+	cout << bt.empty() << endl;
+	BinNodePosi(int) root = bt.insertAsRoot(1);
+	BinNodePosi(int) temp = bt.insertAsLC(root, 2);
+	cout << bt.size() << endl;
+	cout << bt.size(root) << endl;
 	return 0;
 }

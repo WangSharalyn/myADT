@@ -4,7 +4,8 @@
 #include "../Queue/Queue_list.h"
 // 二叉树节点，包括数据域，左子树，右子树，父节点，高度，深度
 #define BinNodePosi(T) BinNode<T>*
-
+#define stature(p) ((p)? (p->height) : -1) // 节点高度，空树高度为-1，一个节点高度为0
+#define __max(a, b) (((a) > (b)) ? (a) : (b))
 template <typename T> struct BinNode {
 	BinNodePosi(T) parent; // 父亲
 	BinNodePosi(T) lc; // 左孩子
@@ -27,6 +28,12 @@ template <typename T> struct BinNode {
 	void traversalPostorder_R(BinNodePosi(T) x); // 后序遍历递归版
 	void traversalPostorder_I(BinNodePosi(T) x); // 后序遍历迭代版
 	void traversalLevel(BinNodePosi(T) x); // 层序遍历
+	// 只读
+	int size();
+	BinNodePosi(T) succ(); // 中序遍历的后继
+	////
+	BinNodePosi(T) zig(); // 顺时针旋转
+	BinNodePosi(T) zag(); // 逆时针旋转
 };
 
 template <typename T>
@@ -46,3 +53,7 @@ BinNodePosi(T) BinNode<T>::insertAsRc(const T& e) {
 #include "BinNode_traversalPostorder_R.h"
 #include "BinNode_traversalPostorder_I.h"
 #include "BinNode_traversalLevel.h"
+#include "BinNode_size.h"
+#include "BinNode_succ.h"
+#include "BinNode_zig.h"
+#include "BinNode_zag.h"
