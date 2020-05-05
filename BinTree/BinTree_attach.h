@@ -1,25 +1,22 @@
 #pragma once
-// 连接另一棵树T成为新的子树
 template <typename T>
-BinNodePosi(T) BinTree<T>::attachAsLC(BinNodePosi(T) x, BinTree<T>*& T) {// 作为左子树
-	_size += T->_size;
-	if (x->lc = T->_root)
-		x->lc->parent = x;
-	updateHeightAbove(x);
-	T->_root = nullptr;
-	T->_size = 0;
-	T = nullptr;
+BinNodePosi(T) BinTree<T>::attachAsLC(BinNodePosi(T) x, BinTree<T>*& S) {
+	if (x->lc = S->_root) x->lc->parent = x; // 接入
+	_size += S->_size;// 更新规模
+	updateHightAbove(x);// 更新x及其祖先的高度
+	S->_root = nullptr;
+	S->_size = 0;
+	S = nullptr;
 	return x;
 }
 
 template <typename T>
-BinNodePosi(T) BinTree<T>::attachAsRC(BinNodePosi(T) x, BinTree<T>*& T) {// 作为右子树
-	_size += T->_size;
-	if (x->rc = T->_root)
-		x->rc->parent = x;
-	updateHeightAbove(x);
-	T->_root = nullptr;
-	T->_size = 0;
-	T = nullptr;
+BinNodePosi(T) BinTree<T>::attachAsRC(BinNodePosi(T) x, BinTree<T>*& S) {
+	if (x->rc = S->_root) x->rc->parent = x;// 接入
+	_size += S->_size;
+	updateHightAbove(x);
+	S->_root = nullptr;
+	S->_size = 0;
+	S = nullptr;
 	return x;
 }

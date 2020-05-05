@@ -1,7 +1,7 @@
 #pragma once
-// ÖÐÐò±éÀúµü´ú°æ
+#include "../Stack/Stack_list.h"
 template <typename T>
-void BinNode<T>::traversalInorder_I(BinNodePosi(T) x) {
+void travIn_I1(BinNodePosi(T) x) {
 	Stack<BinNodePosi(T)> S;
 	while (x || !S.empty()) {
 		while (x) {
@@ -10,7 +10,7 @@ void BinNode<T>::traversalInorder_I(BinNodePosi(T) x) {
 		}
 		if (!S.empty()) {
 			x = S.pop();
-			std::cout << x->data << ' ';
+			printf("%d ", x->data);
 			x = x->rc;
 		}
 	}

@@ -9,4 +9,7 @@ public:
 	T dequeue() {
 		return this->remove(this->first());
 	}
+	bool empty() {
+		return this->size() == 0;
+	}
 };

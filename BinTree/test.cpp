@@ -1,33 +1,20 @@
 #include "BinTree.h"
 #include <iostream>
-using std::cout;
-using std::endl;
+using namespace std;
 
 int main() {
-	BinNode<int> a(1);
-	BinNodePosi(int) b = a.insertAsLc(3);
-	b->insertAsLc(4);
-	b->insertAsRc(2);
-	a.traversalPreorder_R(&a);
-	std::cout << std::endl;
-	a.traversalPreorder_I(&a);
-	std::cout << std::endl;
-	a.traversalInorder_R(&a);
-	std::cout << std::endl;
-	a.traversalInorder_I(&a);
-	std::cout << std::endl;
-	a.traversalPostorder_R(&a);
-	std::cout << std::endl;
-	a.traversalPostorder_I(&a);
-	std::cout << std::endl;
-	a.traversalLevel(&a);
-	std::cout << std::endl;
-	BinTree<int> bt;
-	cout << bt.size() << endl;
-	cout << bt.empty() << endl;
-	BinNodePosi(int) root = bt.insertAsRoot(1);
-	BinNodePosi(int) temp = bt.insertAsLC(root, 2);
-	cout << bt.size() << endl;
-	cout << bt.size(root) << endl;
+	BinNodePosi(int) root = new BinNode<int>(1); //   1
+	root->insertAsLC(2);                         //  2  3
+	root->insertAsRC(3);                         //    4
+	root->rc->insertAsLC(4);
+	cout << root->size() << endl;
+	root->travLevel();
+	root->travPre();
+	root->travIn();
+	root->travPost();
+	//root->zig();
+	//root->travLevel();
+	BinTree<int> T;
+	T.insertAsRoot(1);
 	return 0;
 }

@@ -14,4 +14,7 @@ public:
 	T top() {
 		return this->last()->data;
 	}
+	bool empty() {
+		return this->size() == 0;
+	}
 };
